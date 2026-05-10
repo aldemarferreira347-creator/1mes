@@ -58,12 +58,36 @@
 
     #msg-box {
       background: linear-gradient(135deg, rgba(10, 5, 0, 0.97), rgba(30, 15, 0, 0.97));
-      border: 1.5px solid rgba(255, 200, 0, 0.6);
-      border-radius: 20px;
-      padding: 32px 36px;
-      max-width: 320px;
+      border: 1.5px solid rgba(255, 200, 0, 0.4);
+      border-radius: 24px;
+      padding: 36px 40px;
+      max-width: 650px;
+      max-height: 75vh;
+      overflow-y: auto;
       text-align: center;
-      box-shadow: 0 0 60px rgba(255, 180, 0, 0.3), 0 0 120px rgba(255, 100, 0, 0.15);
+      box-shadow: 0 0 50px rgba(255, 180, 0, 0.2), inset 0 0 40px rgba(0, 0, 0, 0.8);
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255, 200, 0, 0.5) transparent;
+    }
+
+    /* Custom Scrollbar for msg-box */
+    #msg-box::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    #msg-box::-webkit-scrollbar-track {
+      background: transparent;
+      margin: 20px 0;
+      /* Keeps scrollbar away from the very edges */
+    }
+
+    #msg-box::-webkit-scrollbar-thumb {
+      background: rgba(255, 200, 0, 0.3);
+      border-radius: 10px;
+    }
+
+    #msg-box::-webkit-scrollbar-thumb:hover {
+      background: rgba(255, 200, 0, 0.6);
     }
 
     #msg-title {
@@ -77,6 +101,7 @@
       color: #FFE580;
       line-height: 1.9;
       margin-bottom: 16px;
+      text-align: left;
     }
 
     #msg-footer {
@@ -149,13 +174,13 @@
       position: fixed;
       inset: 0;
       z-index: 1000;
-      background: rgba(0, 0, 0, 0.92);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      background: rgba(0, 0, 0, 0.96);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      animation: lbFadeIn 0.4s ease;
+      animation: lbFadeIn 0.35s ease;
     }
 
     #lightbox.active {
@@ -195,19 +220,18 @@
 
     .lb-img-frame {
       position: relative;
-      border-radius: 18px;
+      border-radius: 14px;
       overflow: hidden;
-      box-shadow: 0 0 40px rgba(255, 180, 0, 0.35), 0 0 80px rgba(255, 80, 0, 0.15);
-      border: 2px solid rgba(255, 200, 0, 0.5);
-      max-height: 52vh;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 200, 0, 0.2);
+      max-height: 55vh;
     }
 
     .lb-img-frame img {
       display: block;
       max-width: 100%;
-      max-height: 52vh;
+      max-height: 55vh;
       object-fit: cover;
-      border-radius: 16px;
+      border-radius: 13px;
     }
 
     .lb-caption {
@@ -218,19 +242,18 @@
 
     .lb-caption-title {
       font-family: Georgia, serif;
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 700;
-      color: #FFD700;
+      color: rgba(255, 215, 0, 0.85);
       letter-spacing: 2px;
-      text-shadow: 0 0 10px #FFD700;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .lb-caption-text {
       font-family: Georgia, serif;
-      font-size: 14px;
-      color: #FFE580;
-      line-height: 1.85;
+      font-size: 13px;
+      color: rgba(255, 230, 160, 0.75);
+      line-height: 1.8;
       font-style: italic;
     }
 
@@ -335,12 +358,77 @@
           <div id="msg-title">💛</div>
           <div id="msg-heading">Para ti</div>
           <div id="msg-text">
-            En este universo infinito,<br>
-            entre millones de estrellas y galaxias,<br>
-            <em style="color:#FFD700;">tú eres mi color favorito.</em><br><br>
-            Como el amarillo que ilumina<br>
-            cada rincón oscuro,<br>
-            así iluminas tú mi mundo.
+            10 de mayo del 2026<br><br>
+
+            Un nuevo año acompañados de muchos recuerdos, algunos más bonitos que otros quizás… pero siempre vuelves a
+            caer en mis brazos. Tal parece que yo soy tu destino, tu laberinto sin salida… esa frase de la primera
+            canción que me dedicaste y que, por alguna razón, se quedó grabada en mi mente.<br><br>
+
+            Hoy cumplimos 1 mes de novios. Un mes… sin contar esos 268 días, o 8 meses, 3 semanas y 4 días, donde poco a
+            poco te fuiste metiendo en mi vida hasta convertirte en una parte imposible de ignorar.<br><br>
+
+            Toda la experiencia de este día va a ser única para mí. Estoy tan ansioso que escribo esto mucho tiempo
+            antes, porque mi corazón simplemente no sabe quedarse quieto cuando se trata de ti. Podría decirte “gracias
+            por todo” y “te quiero mucho”, pero siento que eso sería demasiado pequeño para todo lo que haces sentir en
+            mí. Y si voy a hacer algo, quiero hacerlo bien, como siempre trato de hacerlo contigo.<br><br>
+
+            Todavía me pregunto cómo fue que entraste a este rígido corazón. No sé cómo lo hiciste… pero me alegra
+            demasiado que lo hayas hecho. Porque ahora tengo la suerte de mirar a los ojos a una niña medio melosa que
+            todos los días me recuerda cuánto me quiere, que me manda besos, que hace monachas solo por molestarme, y
+            que aun así logra verse linda en cada gesto.<br><br>
+
+            Qué bonito es verte todas las noches con esas gafas.<br>
+            Qué bonito es cuando me haces caso.<br>
+            Qué bonito es cuando pones ese tonito de voz.<br>
+            Qué bonitas son tus muestras de cariño sinceras.<br>
+            Y qué bonito ha sido conocerte.<br><br>
+
+            Siempre he dicho que el tiempo pasa y no espera, pero hay algo de lo que estoy seguro como de nada más en
+            esta vida: no quiero perder ni un solo momento contigo.<br><br>
+
+            En esta etapa de nuestra vida no nos queda mucho tiempo para vernos, y esa pequeña fecha de “jueves” vive
+            como un cronómetro no solo en mi mente, sino también en mi corazón. A veces todavía no soporta la idea de
+            que esa niña tan especial, dueña de todo y nada a la vez, no va a estar frente a mí de lunes a
+            viernes.<br><br>
+
+            Por eso trato de disfrutar cada día al máximo, aunque a veces mis intentos no sean los más bonitos… jaja.
+            Pero esos abrazos fuertes no son para molestarte; son la forma más sincera que tengo de demostrar cuánto te
+            quiero conmigo y lo difícil que se me hace imaginar la distancia.<br><br>
+
+            Si supieran todo lo que hago contigo, todas esas muestras de cariño que a nadie más le doy, sentirían
+            envidia todas esas personas que esperaron la oportunidad de poder robarme de tus brazos. Pero mis valores,
+            mis sentimientos y todo lo que siento por ti fueron más fuertes que cualquier otra cosa.<br><br>
+
+            Hoy es solo un día más, pero no cualquier día. Hoy hace un mes me declaré… y ahora sí, ya no tengo nada más
+            que buscar aparte de un futuro lleno de alegrías contigo. Me gusta saber que te gusta todo de mí, porque
+            créeme que eso es completamente mutuo.<br><br>
+
+            Siempre me preguntaré cómo te verás al frente del mar.<br>
+            ¿Brillarás?<br>
+            ¿Me deslumbrarás?<br>
+            ¿Me perderé en tu marea?<br>
+            ¿Me dejaré llevar por tus aguas?<br><br>
+
+            Y sé que ese momento va a llegar. Y cuando llegue, no voy a querer salir de ahí. Porque, ¿para qué luchar
+            contra algo que solo me hace feliz?<br><br>
+
+            Si fuera por mí, estaría todo el día al lado de la mujer que más feliz me hace, viendo una de esas series
+            que tanto menciona en las noches, mientras la luna ilumina tu cara y yo me quedo observando todos esos
+            pequeños gestos que te hacen única… incluso esas caras de disgusto y esas monachas que haces solo por
+            molestarme.<br><br>
+
+            Hoy cumplimos un mes.<br>
+            Y sí… tal vez, si las cosas hubieran sido diferentes, serían cinco o seis meses. Pero sinceramente, me
+            encantan las cosas tal y como van. El cariño, las experiencias, el compartir contigo, cada abrazo, cada
+            conversación y cada momento vivido.<br><br>
+
+            Entonces sí, sí, sí, sí mi amor…<br>
+            Qué bonito está siendo quererte.<br>
+            Qué bonito está siendo vivir esto contigo.<br>
+            Y qué bonito que seas mi primera novia.<br><br>
+
+            Tú dijiste que iba subiendo de nivel cada mes…<br>
+            Entonces, ¿qué será la próxima?
           </div>
           <div id="msg-footer">✦ con amor eterno ✦</div>
         </div>
@@ -358,6 +446,21 @@
       <div id="lb-dots"></div>
     </div>
   </div>
+
+  <div id="audio-start" style="
+    position:fixed; inset:0; z-index:9999;
+    display:flex; flex-direction:column;
+    align-items:center; justify-content:center;
+    background:rgba(0,0,0,0.88);
+    cursor:pointer;
+    font-family: Georgia, serif;
+  ">
+    <div style="font-size:48px; margin-bottom:16px;">🎵</div>
+    <div style="color:#FFD700; font-size:18px; letter-spacing:4px;">Toca para comenzar</div>
+    <div style="color:rgba(255,200,0,0.4); font-size:11px; letter-spacing:2px; margin-top:8px;">con música</div>
+  </div>
+
+  <audio id="bg-audio" src="music/airplane.mp3" preload="auto"></audio>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script>
@@ -391,6 +494,61 @@
       let zoom = 32, tZoom = 32;
       let msgShown = false;
       let quizCompleted = false; // 🔥 NUEVO
+      let letterShown = false;
+
+      // ---- AUDIO SYSTEM ----
+      const audio = document.getElementById('bg-audio');
+      let audioPhase = 'ambient'; // 'ambient' | 'comet' | 'letter'
+      let audioFadeTimer = null;
+
+      function audioFadeTo(targetVol, durationMs, onDone) {
+        clearInterval(audioFadeTimer);
+        const startVol = audio.volume;
+        const steps = 40;
+        const interval = durationMs / steps;
+        const delta = (targetVol - startVol) / steps;
+        let step = 0;
+        audioFadeTimer = setInterval(() => {
+          step++;
+          audio.volume = Math.min(1, Math.max(0, startVol + delta * step));
+          if (step >= steps) {
+            clearInterval(audioFadeTimer);
+            audio.volume = targetVol;
+            if (onDone) onDone();
+          }
+        }, interval);
+      }
+
+      function startAmbientMusic() {
+        audio.currentTime = 0;
+        audio.volume = 0.28;
+        audio.play();
+      }
+
+      function triggerCometMusic() {
+        if (audioPhase !== 'ambient') return;
+        audioPhase = 'comet';
+        // Fade up to 0.55 over 1.5s
+        audioFadeTo(0.55, 1500);
+      }
+
+      function triggerLetterMusic() {
+        if (audioPhase === 'letter') return;
+        audioPhase = 'letter';
+        // Fade out, jump to 1:02, fade back in softly
+        audioFadeTo(0, 800, () => {
+          audio.currentTime = 62; // 1:02
+          audioFadeTo(0.45, 1200);
+        });
+      }
+
+      // Click-to-start overlay
+      document.getElementById('audio-start').addEventListener('click', function () {
+        this.style.opacity = '0';
+        this.style.transition = 'opacity 0.6s';
+        setTimeout(() => { this.style.display = 'none'; }, 700);
+        startAmbientMusic();
+      });
 
       const quizQuestions = [
         {
@@ -426,8 +584,10 @@
       function loadQuestion() {
         if (currentQ >= quizQuestions.length) {
           quizCompleted = true; // 🔥 IMPORTANTE
+          const msg = document.getElementById('msg');
+          msg.style.opacity = '0';
+          msg.style.pointerEvents = 'none';
           document.getElementById('quiz-container').style.display = 'none';
-          document.getElementById('final-msg').style.display = 'block';
           return;
         }
 
@@ -455,12 +615,7 @@
       }
 
       function showQuiz() {
-        if (quizCompleted) {
-          // 👉 ya no mostrar preguntas, solo la carta
-          document.getElementById('quiz-container').style.display = 'none';
-          document.getElementById('final-msg').style.display = 'block';
-          return;
-        }
+        if (quizCompleted) return;
 
         currentQ = 0;
         document.getElementById('quiz-container').style.display = 'block';
@@ -786,7 +941,10 @@
 
       const photoUrls = [
         'img/foto1.jpeg',
-        'img/foto2.jpeg'
+        'img/foto2.jpeg',
+        'img/foto4.jpeg',
+        'img/foto6.jpeg',
+        'img/foto5.jpeg'
       ];
 
       // Romantic captions inspired by each photo
@@ -797,7 +955,19 @@
         },
         {
           title: '🌙 Incluso dormida, me haces feliz',
-          text: 'A través de una pantalla,\nen la quietud de la noche,\nte miraba dormir y pensé:\n“esta persona es mi casa,\nno importa la distancia.”'
+          text: 'A través de una pantalla,\nen el silencio de la madrugada,\nte miraba dormir y entendí algo que jamás había sentido:\nque incluso en la distancia,\nmi lugar favorito seguía siendo contigo.\nPorque hay personas que no solo se quieren…\nse sienten como hogar.'
+        },
+        {
+          title: '💛 aunque sea un momento',
+          text: 'Cada segundo contigo\nvale más que horas\nsin ti a mi lado.'
+        },
+        {
+          title: '🌟 Esa sonrisa',
+          text: 'Esa sonrisa que me regalas\nes el mejor motivo\nque tengo para seguir.'
+        },
+        {
+          title: '🕊️ Para siempre en mi memoria',
+          text: 'Hay momentos que no necesitan\nser perfectos para ser eternos.\nEste es uno de ellos mientras tú me ignoras 😢.'
         }
       ];
 
@@ -949,12 +1119,22 @@
 
         if (!cometActive && time > 5) {
           createComet();
+          triggerCometMusic();
         }
 
         // Smooth camera
         rotX += (tRX - rotX) * 0.07;
         rotY += (tRY - rotY) * 0.07;
         zoom += (tZoom - zoom) * 0.09;
+
+        if (quizCompleted && !letterShown && zoom < 14) {
+          letterShown = true;
+          const msg = document.getElementById('msg');
+          msg.style.pointerEvents = 'auto';
+          msg.style.opacity = '1';
+          document.getElementById('final-msg').style.display = 'block';
+          triggerLetterMusic();
+        }
 
         if (typeof galaxyPts !== 'undefined') {
           galaxyPts.rotation.y -= 0.0003;
@@ -1049,16 +1229,11 @@
               const closeFn = () => {
                 msg.style.opacity = '0';
                 msg.style.pointerEvents = 'none';
-                // NO volver a permitir que aparezca otra vez
-                // setTimeout(() => { msgShown = false; }, 900);
               };
 
               msg.onclick = closeFn;
-              document.getElementById('final-msg').onclick = closeFn;
               document.getElementById('msg-box').onclick = (e) => {
-                if (currentQ < quizQuestions.length) {
-                  e.stopPropagation();
-                }
+                e.stopPropagation();
               };
             }
           }
